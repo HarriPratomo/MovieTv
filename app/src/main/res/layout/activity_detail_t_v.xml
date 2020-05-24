@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/detailTV"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.DetailTVActivity">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/favBtnTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        app:backgroundTint="#FF9800"
+        android:src="@drawable/unfavorites"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:id="@+id/backBtnTV"
+        android:src="@drawable/back"
+        android:tint="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_centerHorizontal="true"
+                android:layout_width="300dp"
+                android:layout_height="350dp"
+                android:layout_margin="30dp"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="15dp"
+                android:elevation="1dp"
+                android:scaleType="centerCrop">
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/no_image"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/imageTV_Detail"/>
+
+            </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:id="@+id/r2"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/l1"
+                    android:layout_width="90dp"
+                    android:layout_height="110dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="20dp"
+                    android:elevation="1dp"
+                    android:scaleType="centerCrop">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="90dp"
+                        android:layout_height="110dp"
+                        android:src="@drawable/no_image"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/imagePoster_Detail"/>
+
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/l1">
+                    <TextView
+                        android:id="@+id/nameTVDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Joker"
+                        android:fontFamily="@font/gilroy_regular"
+                        android:textStyle="bold"
+                        android:textSize="17sp"/>
+                    <RatingBar
+                        android:id="@+id/ratingBarTV"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:isIndicator="true"
+                        android:max="5"
+                        android:numStars="5"
+                        android:progressBackgroundTint="#6E6C6C"
+                        android:progressTint="#FFC107"
+                        android:stepSize="0.1" />
+                    <TextView
+                        android:id="@+id/dateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="20 May 2020"
+                        android:fontFamily="@font/gilroy_regular"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/genreTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="Drama"
+                        android:fontFamily="@font/gilroy_regular"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginStart="15sp"
+                android:layout_below="@+id/r2">
+                <TextView
+                    android:id="@+id/synopsis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Synopsis"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:maxLines="2"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/descTVDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/synopsis"
+                    android:text="@string/desc"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_below="@+id/descTVDetail"
+                    android:id="@+id/txtMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy"
+                    android:text="more ......"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"
+                    />
+                <TextView
+                    android:id="@+id/cast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cast"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/txtMore"
+                    android:layout_marginTop="20dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_below="@+id/cast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rv_cast_tv"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:id="@+id/similarTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Similar TV"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/rv_cast_tv"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:visibility="gone"
+                    android:layout_below="@+id/similarTV"
+                    android:id="@+id/emptyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:text="No similar TV found !"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_below="@+id/emptyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rv_similar_tv"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:id="@+id/recomendTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recomendations"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/rv_similar_tv"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:visibility="gone"
+                    android:layout_below="@+id/recomendTV"
+                    android:id="@+id/emptyTexttv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:text="No similar TV found !"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_below="@+id/emptyTexttv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rv_recomend_tv"
+                    android:layout_marginTop="10dp"/>
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+<!--    <ProgressBar-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:id="@+id/loadProgressTV"/>-->
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:id="@+id/mainLayout"
+    android:layout_height="match_parent"
+    tools:context=".activity.SignIn_Activity">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/bg_login"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back"
+        android:fontFamily="@font/gilroy_regular"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"/>
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btn_google"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:layout_centerHorizontal="true"
+        android:drawableStart="@drawable/google_24"
+        android:textColor="@color/white"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

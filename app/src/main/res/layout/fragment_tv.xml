@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".fragment.TvFragment">
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/background">
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discover TV Show"
+            android:layout_marginStart="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/gilroy_bold"
+            android:textSize="30sp"
+            android:textColor="#FF5722"/>
+
+        <ImageButton
+            android:id="@+id/searchMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search_black_24dp"
+            android:tint="@color/colorPrimaryDark"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:background="@color/transparent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpagerTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/tab_layout_tv" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_below="@+id/r1"
+        android:id="@+id/tab_layout_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        app:tabGravity="fill"
+        app:tabIndicator="@drawable/tab_indicator"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="#FF5722"
+        app:tabTextAppearance="@style/tab_text" />
+
+
+
+
+</RelativeLayout>

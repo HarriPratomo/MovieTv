@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MoviExample</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="desc">Snackbar in android is a new widget introduced with the Material Design library as a replacement of a Toast.
+
+Android Snackbar is light-weight widget and they are used to show messages in the bottom of the application with swiping enabled. Snackbar android widget may contain an optional action button.</string>
+    <string name="add_favorite">Add to Favorites</string>
+    <string name="fail_favorite">Remove from favorites</string>
+    <string name="remove_favorite">Removed from favorite</string>
+    <string name="fail_remove">Failed to remove from favorite</string>
+    <string name="keystore">758225634994-c1pua6gh40unhi1qll8em8a50bu0gqdh.apps.googleusercontent.com</string>
+    <string name="clientID">BGjCiMZmdhWgh14baSzUXkZV</string>
+
+</resources>
